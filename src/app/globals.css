@@ -29,7 +29,15 @@ body {
   margin: 0;
   background: var(--page-bg);
   color: var(--text);
-  font-family: MiSans, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family:
+    MiSans,
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
@@ -68,6 +76,7 @@ a {
   width: min(944px, calc(100vw - 48px));
   height: min(528px, calc(100svh - 48px));
   min-height: 528px;
+
   display: grid;
   grid-template-columns: 260px 288px 220px;
   column-gap: 10px;
@@ -86,7 +95,9 @@ a {
 }
 
 .center-column {
-  grid-template-rows: 236px 138px 68px;
+  display: grid;
+  min-width: 0;
+  grid-template-rows: 236px 138px 1fr;
   gap: 10px;
 }
 
@@ -95,7 +106,9 @@ a {
   overflow: hidden;
   border: 1px solid var(--glass-border);
   border-radius: 9px;
-  background: linear-gradient(180deg, var(--glass-highlight), transparent 32%), var(--glass-bg);
+  background:
+    linear-gradient(180deg, var(--glass-highlight), transparent 32%),
+    var(--glass-bg);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.015),
     0 10px 24px rgba(0, 0, 0, 0.12);
@@ -195,7 +208,10 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.06);
   background: rgba(42, 42, 44, 0.82);
   color: #f4f4f4;
-  transition: transform 150ms ease, background 150ms ease, border-color 150ms ease;
+  transition:
+    transform 150ms ease,
+    background 150ms ease,
+    border-color 150ms ease;
 }
 
 .icon-link:hover {
@@ -257,7 +273,9 @@ a {
 
 .projects-card {
   grid-column: 3;
-  grid-row: 1 / span 2;
+  grid-row: auto;
+  align-self: stretch;
+  height: auto;
   padding: 18px;
 }
 
