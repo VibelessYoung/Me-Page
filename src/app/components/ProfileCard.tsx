@@ -5,7 +5,7 @@ export default function ProfileCard() {
   return (
     <GlassCard className="profile-card">
       <Image
-        src="/avatar.png"
+        src="/yuta.png"
         alt="sip c.ink avatar"
         width={48}
         height={48}
