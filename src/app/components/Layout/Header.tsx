@@ -6,9 +6,9 @@ import { Flower2 } from "lucide-react";
 
 const navigation = [
   { label: "Home", href: "/" },
-  { label: "About", href: "#about" },
-  { label: "Blog", href: "#blog" },
-  { label: "Music", href: "#music" },
+  { label: "About", href: "about" },
+  { label: "Blog", href: "blog" },
+  { label: "Music", href: "music" },
 ];
 
 export default function Header() {
