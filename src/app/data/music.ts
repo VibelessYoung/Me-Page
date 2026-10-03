@@ -18,7 +18,7 @@ export const tracks: Track[] = [
     id: "loneliness",
     title: "loneliness",
     artist: "prodghesti3",
-    src: "/music/killswitch.mp3",
+    src: "/music/loneliness.mp3",
     cover: "/music-covers/c4.jpg",
   },
   {
