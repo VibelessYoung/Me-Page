@@ -2,13 +2,29 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Flower2 } from "lucide-react";
+import { Flower2, House, UserRound, BookOpen, Music2 } from "lucide-react";
 
 const navigation = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "about" },
-  { label: "Blog", href: "blog" },
-  { label: "Music", href: "music" },
+  {
+    label: "Home",
+    href: "/",
+    icon: House,
+  },
+  {
+    label: "About",
+    href: "/about",
+    icon: UserRound,
+  },
+  {
+    label: "Blog",
+    href: "/blog",
+    icon: BookOpen,
+  },
+  {
+    label: "Music",
+    href: "/music",
+    icon: Music2,
+  },
 ];
 
 export default function Header() {
@@ -90,25 +106,29 @@ export default function Header() {
             backdrop-blur-sm
           "
         >
-          {navigation.map((item) => (
-            <Link
-              key={item.label}
-              href={item.href}
-              className="
-                rounded-full
-                px-3 py-2
-                text-xs font-medium
-                text-white/55
-                transition-all duration-300
-                hover:bg-white/8
-                hover:text-white
-                sm:px-4
-                sm:text-sm
-              "
-            >
-              {item.label}
-            </Link>
-          ))}
+          {navigation.map((item) => {
+            const Icon = item.icon;
+
+            return (
+              <Link
+                key={item.label}
+                href={item.href}
+                title={item.label}
+                aria-label={item.label}
+                className="
+                  flex size-9 items-center justify-center
+                  rounded-full
+                  text-white/50
+                  transition-all duration-300
+                  hover:bg-white/8
+                  hover:text-white
+                  sm:size-10
+                "
+              >
+                <Icon size={17} strokeWidth={1.7} />
+              </Link>
+            );
+          })}
         </nav>
       </div>
     </header>
