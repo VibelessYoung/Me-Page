@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 
-import Header from "./components/Layout/Header";
 import Background from "./components/Dashboard/Background";
+import FloatingMenu from "./components/Layout/FloatingMenu";
 
 export const metadata: Metadata = {
   title: "VibelessYoung",
@@ -20,10 +20,9 @@ export default function RootLayout({
       <body className="relative min-h-screen">
         <Background />
 
-        <div className="relative z-10">
-          <Header />
-          {children}
-        </div>
+        <div className="relative z-10">{children}</div>
+
+        <FloatingMenu />
       </body>
     </html>
   );
