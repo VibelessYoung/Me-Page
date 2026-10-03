@@ -57,6 +57,7 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
           </div>
 
           <h1
+          dir="rtl"
             className="
               mt-6
               text-4xl
@@ -70,11 +71,12 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
           </h1>
 
           <p
+          dir="rtl"
             className="
               mt-6
               text-base
               leading-8
-              text-white/45
+              text-white/80
               sm:text-lg
             "
           >
@@ -89,26 +91,6 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
             bg-white/10
           "
         />
-
-        <div
-          className="
-            prose
-            prose-invert
-            max-w-none
-            prose-headings:font-medium
-            prose-headings:tracking-tight
-            prose-p:text-white/60
-            prose-p:leading-8
-            prose-a:text-white
-          "
-        >
-          <p>This is where the blog content will live.</p>
-
-          <p>
-            You can later replace this section with the actual content of the
-            article.
-          </p>
-        </div>
       </article>
     </main>
   );

@@ -4,6 +4,7 @@ import { blogs } from "@/app/data/blogs";
 export default function BlogGrid() {
   return (
     <div
+    dir="rtl"
       className="
         grid
         grid-cols-1
