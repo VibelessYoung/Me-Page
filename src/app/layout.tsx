@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+
 import "./globals.css";
+
 import Header from "./components/Layout/Header";
+import Background from "./components/Dashboard/Background";
 
 export const metadata: Metadata = {
   title: "VibelessYoung",
@@ -9,12 +12,18 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en">
-      <body>
-        <Header />
-        {children}
+      <body className="relative min-h-screen">
+        <Background />
+
+        <div className="relative z-10">
+          <Header />
+          {children}
+        </div>
       </body>
     </html>
   );
